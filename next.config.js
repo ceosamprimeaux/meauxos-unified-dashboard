@@ -4,13 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Ignore favicon during build
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.ico$/,
-      type: 'asset/resource',
-    });
-    return config;
+  // Use webpack instead of Turbopack for compatibility
+  experimental: {
+    turbo: false,
   },
 };
 
