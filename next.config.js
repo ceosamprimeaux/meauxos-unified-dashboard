@@ -3,12 +3,9 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  outputFileTracingRoot: path.join(__dirname),
   images: {
     unoptimized: true,
-  },
-  // Use webpack instead of Turbopack for compatibility
-  experimental: {
-    turbo: false,
   },
   webpack: (config) => {
     config.resolve.alias = {
