@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: Build Next.js
-        run: npm run build
+        run: npx next build --webpack
         env:
           NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL || 'https://meauxcloudservices-365932368784.europe-west1.run.app' }}
 
